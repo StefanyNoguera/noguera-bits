@@ -13,17 +13,17 @@ export default function Home() {
           </div>
 
           <div className="flex p-2">
-            <h1 className="text-stone-800">CONTACT</h1>
+            <h1 className="text-stone-800">CONTACTO</h1>
             <p className="pt-1"><AiOutlineCaretDown/></p>
           </div>
         </nav>
 
         <div className="flex-grow">
-          <div className="absolute inset-x-0 bottom-0 flex justify-center h-80 min-w-full md:h-96 md:min-w-full">
+          <div className="absolute  inset-x-0 bottom-0 flex justify-center h-80 min-w-full md:h-96 md:min-w-full">
             <Image
               src="/casa.png"
               fill= "relative"
-              style={{ objectFit: 'cover', objectPosition: 'left top'}}
+              style={{ objectFit: 'cover', objectPosition: 'left top' }}
               alt="Picture of the author"
             />
           </div>
