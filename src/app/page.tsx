@@ -51,6 +51,46 @@ export default function Home() {
         </div>
       </div>
 
+      <div>
+        <h1>¿Por qué nosotros?</h1>
+
+        <div>
+          <h1>Equipo Profesional</h1>
+          <p>
+          Nuestro equipo profesional altamente cualificado de arquitectos, ingenieros y expertos en
+          construcción trabaja en estrecha colaboración con nuestros clientes para convertir sus ideas en
+          realidad, utilizando técnicas y tecnologías de vanguardia.
+          </p>
+        </div>
+
+        <div>
+          <h1>Calidad y Excelencia</h1>
+          <p>
+          Nos enorgullece ofrecer resultados excepcionales en cada proyecto, superando las expectativas
+          de nuestros clientes. Utilizamos los mejores materiales y técnicas de construcción para garantizar
+          la calidad y durabilidad de nuestros proyectos, creando espacios funcionales y hermosos.
+          </p>
+        </div>
+
+        <div>
+          <h1>Cumplimiento de Plazos y Presupuestos</h1>
+          <p>
+          Nuestro equipo de gestión de proyectos altamente capacitado planifica y coordina cada etapa de la
+          construcción de manera eficiente. Nos comprometemos a cumplir con los plazos y presupuestos acordados,
+          manteniendo una comunicación abierta y transparente con nuestros clientes.
+          </p>
+        </div>
+
+        <div>
+          <h1>Testimonios y Referencias</h1>
+          <p>
+          La satisfacción de nuestros clientes es nuestra prioridad. Hemos recibido testimonios positivos
+          de clientes satisfechos que destacan nuestra profesionalidad, atención al detalle y compromiso con
+          la excelencia. Nuestro historial de referencias y testimonios respalda nuestro enfoque centrado en el cliente.
+          </p>
+        </div>
+      </div>
+
     </main>
   );
 }
