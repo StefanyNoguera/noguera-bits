@@ -53,11 +53,11 @@ export default function Home() {
 
       <h1 className='font-bold text-3xl md:m-12 text-darkgray'>¿Por qué nosotros?</h1>
 
-      <div className='flex justify-between md:m-16'>
+      <div className='lg:flex lg:justify-between md:m-16'>
         {/* <div className='mr-7 '> */}
           <div className='m-5 '>
-            <h1 className='font-bold text-xl text-darkgray'>Equipo Profesional</h1>
-            <p>
+            <h1 className='font-bold text-xl text-darkgray pb-3'>Equipo Profesional</h1>
+            <p className='text-darkgray'>
             Nuestro equipo profesional altamente cualificado de arquitectos, ingenieros y expertos en
             construcción trabaja en estrecha colaboración con nuestros clientes para convertir sus ideas en
             realidad, utilizando técnicas y tecnologías de vanguardia.
@@ -65,8 +65,8 @@ export default function Home() {
           </div>
 
           <div className='m-5'>
-            <h1 className='font-bold text-xl text-darkgray'>Calidad y Excelencia</h1>
-            <p>
+            <h1 className='font-bold text-xl text-darkgray pb-3'>Calidad y Excelencia</h1>
+            <p className='text-darkgray'>
             Nos enorgullece ofrecer resultados excepcionales en cada proyecto, superando las expectativas
             de nuestros clientes. Utilizamos los mejores materiales y técnicas de construcción para garantizar
             la calidad y durabilidad de nuestros proyectos, creando espacios funcionales y hermosos.
@@ -76,8 +76,8 @@ export default function Home() {
 
         {/* <div className=''> */}
           <div className='m-5'>
-            <h1 className='font-bold text-xl text-darkgray'>Cumplimiento de Plazos y Presupuestos</h1>
-            <p>
+            <h1 className='font-bold text-xl text-darkgray pb-3'>Cumplimiento de Plazos y Presupuestos</h1>
+            <p className='text-darkgray'>
             Nuestro equipo de gestión de proyectos altamente capacitado planifica y coordina cada etapa de la
             construcción de manera eficiente. Nos comprometemos a cumplir con los plazos y presupuestos acordados,
             manteniendo una comunicación abierta y transparente con nuestros clientes.
@@ -85,14 +85,20 @@ export default function Home() {
           </div>
 
           <div className='m-5'>
-            <h1 className='font-bold text-xl text-darkgray'>Testimonios y Referencias</h1>
-            <p>
+            <h1 className='font-bold text-xl text-darkgray pb-3'>Testimonios y Referencias</h1>
+            <p className='text-darkgray'>
             La satisfacción de nuestros clientes es nuestra prioridad. Hemos recibido testimonios positivos
             de clientes satisfechos que destacan nuestra profesionalidad, atención al detalle y compromiso con
             la excelencia. Nuestro historial de referencias y testimonios respalda nuestro enfoque centrado en el cliente.
             </p>
           </div>
         {/* </div> */}
+      </div>
+
+      <div className='relative bg-darkgray h-72 py-12 px-52 justify-between'>
+        <h1 className='text-gray'>Contáctanos</h1>
+        <a className='text-gray' href = "mailto: noguera.bits@gmail.com">Envía un correo</a>
+        <a className='text-lightblue' href = "mailto: noguera.bits@gmail.com"> noguera.bits@gmail.com</a>
       </div>
 
     </main>
