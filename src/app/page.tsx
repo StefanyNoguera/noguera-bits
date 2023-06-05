@@ -1,7 +1,39 @@
+'use client';
+
 import Image from 'next/image';
 import {AiOutlineCaretDown} from "react-icons/ai";
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
 
 export default function Home() {
+
+  const formik = useFormik ({
+    initialValues: {
+      name: '',
+      email: '',
+      message: '',
+      terms: '',
+    },
+
+    validationSchema: Yup.object({
+      name: Yup.string()
+        .max(20, 'Debe tener 20 caracteres o menos')
+        .required('Su Nombre es Requerido'),
+      email: Yup.string()
+        .email('Correo electrónico inválido')
+        .required('Su Correo electrónico Requerido'),
+      message: Yup.string()
+        .max(300, 'Debe tener 300 caracteres o menos')
+        .required('Un Mensaje es Requerido'),
+      terms: Yup.array().required('Requerido'),
+
+    }),
+
+    onSubmit: (values) => {
+      console.log(values);
+    },
+  });
+
   return (
     <main>
       <div className="bg-gradient-to-b from-white to-gray min-h-screen">
@@ -42,7 +74,7 @@ export default function Home() {
           <p className='text-gray pl-5 text-xl'>Proyectos <br />Completados</p>
         </div>
         <div className='flex items-center'>
-          <h1 className='font-bold text-6xl text-lightblue'>5+</h1>
+          <h1 className='font-bold text-6xl text-lightblue'>2+</h1>
           <p className='text-gray pl-5 text-xl'>Años de <br />Experiencia</p>
         </div>
         <div className='flex items-center'>
@@ -96,18 +128,29 @@ export default function Home() {
       </div>
 
       <div className="flex items-center justify-center">
-        <form className='flex w-full bg-darkgray'>
+        <form
+          onSubmit={formik.handleSubmit}
+          className='flex w-full bg-darkgray'
+        >
           <div className='flex-1 p-20 text-gray'>
             <h1 className='text-2xl pb-2 font-bold'>Contactanos!</h1>
             <p className='text-lg'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
 
             <div className='mt-6'>
               <div className='pb-4'>
-                <label className='block font-bold text-sm pb-2' htmlFor="name">Nombre</label>
+                <label
+                  className='block font-bold text-sm pb-2'
+                  htmlFor="name"
+                >
+                  {formik.touched.name && formik.errors.name ? <div className='text-red-500'>{formik.errors.name}</div> : 'Nombre'}
+                </label>
                 <input
                   className='border-2 border-gray p-2 w-1/2 focus:outline-none focus:border-lightblue text-darkgray'
                   type="text"
                   name='name'
+                  value={formik.values.name}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
                   placeholder='Pon tu nombre'
                 />
               </div>
@@ -115,15 +158,33 @@ export default function Home() {
 
             <div className='mt-6'>
               <div className='pb-4'>
-                <label className='block font-bold text-sm pb-2' htmlFor="email">Correo Electrónico</label>
-                <input className='border-2 border-gray p-2 w-1/2 focus:outline-none focus:border-lightblue text-darkgray' type="email" name='email' placeholder='Pon tu correo electrónico' />
+                <label
+                  className='block font-bold text-sm pb-2'
+                  htmlFor="email">Correo Electrónico
+                </label>
+                <input
+                  className='border-2 border-gray p-2 w-1/2 focus:outline-none focus:border-lightblue text-darkgray'
+                  type="email"
+                  name='email'
+                  value={formik.values.email}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  placeholder='Pon tu correo electrónico'
+                />
               </div>
             </div>
 
             <div className='mt-6'>
               <div className='pb-4'>
                 <label className='block font-bold text-sm pb-2' htmlFor="message">Mensaje</label>
-                <textarea className='border-2 border-gray p-2 w-1/2 focus:outline-none focus:border-lightblue text-darkgray' name='message' rows={4} placeholder='Escribe tu mensaje'></textarea>
+                <textarea
+                  className='border-2 border-gray p-2 w-1/2 focus:outline-none focus:border-lightblue text-darkgray'
+                  name='message'
+                  rows={4}
+                  value={formik.values.message}
+                  onChange={formik.handleChange}
+                  placeholder='Escribe tu mensaje'>
+                </textarea>
               </div>
             </div>
 
@@ -131,8 +192,14 @@ export default function Home() {
               <div className='pb-4'>
                 <label className='block font-bold text-sm pb-2' htmlFor="terms">Términos de Servicio</label>
                 <div className='flex items-center gap-2'>
-                  <input type="checkbox" name='terms' value='checked' className='h-5 w-5 text-lightblue border-2 focus:outline-lightblue'/>
-                  <p className="text-sm text-xs">
+                  <input
+                    type="checkbox"
+                    name='terms'
+                    value='checked'
+                    onChange={formik.handleChange}
+                    className='h-5 w-5 text-lightblue border-2 focus:outline-lightblue'
+                  />
+                  <p className="text-xs">
                   Al usar este formulario, aceptas proporcionar información precisa
                   y nos comprometemos a mantener tus datos personales confidenciales.
                   </p>
