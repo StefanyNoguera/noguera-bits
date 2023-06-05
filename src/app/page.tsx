@@ -29,7 +29,7 @@ export default function Home() {
                 src="/casa.png"
                 fill
                 style={{ objectFit: 'cover', objectPosition: 'left top' }}
-                alt="Picture of the author"
+                alt="Casa"
               />
             </div>
           </div>
@@ -95,10 +95,63 @@ export default function Home() {
         {/* </div> */}
       </div>
 
-      <div className='relative bg-darkgray h-72 py-12 px-52 justify-between'>
-        <h1 className='text-gray'>Contáctanos</h1>
-        <a className='text-gray' href = "mailto: noguera.bits@gmail.com">Envía un correo</a>
-        <a className='text-lightblue' href = "mailto: noguera.bits@gmail.com"> noguera.bits@gmail.com</a>
+      <div className="flex items-center justify-center">
+        <form className='flex w-full bg-darkgray'>
+          <div className='flex-1 p-20 text-gray'>
+            <h1 className='text-2xl pb-2 font-bold'>Contactanos!</h1>
+            <p className='text-lg'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
+
+            <div className='mt-6'>
+              <div className='pb-4'>
+                <label className='block font-bold text-sm pb-2' htmlFor="name">Nombre</label>
+                <input
+                  className='border-2 border-gray p-2 w-1/2 focus:outline-none focus:border-lightblue text-darkgray'
+                  type="text"
+                  name='name'
+                  placeholder='Pon tu nombre'
+                />
+              </div>
+            </div>
+
+            <div className='mt-6'>
+              <div className='pb-4'>
+                <label className='block font-bold text-sm pb-2' htmlFor="email">Correo Electrónico</label>
+                <input className='border-2 border-gray p-2 w-1/2 focus:outline-none focus:border-lightblue text-darkgray' type="email" name='email' placeholder='Pon tu correo electrónico' />
+              </div>
+            </div>
+
+            <div className='mt-6'>
+              <div className='pb-4'>
+                <label className='block font-bold text-sm pb-2' htmlFor="message">Mensaje</label>
+                <textarea className='border-2 border-gray p-2 w-1/2 focus:outline-none focus:border-lightblue text-darkgray' name='message' rows={4} placeholder='Escribe tu mensaje'></textarea>
+              </div>
+            </div>
+
+            <div className='mt-6'>
+              <div className='pb-4'>
+                <label className='block font-bold text-sm pb-2' htmlFor="terms">Términos de Servicio</label>
+                <div className='flex items-center gap-2'>
+                  <input type="checkbox" name='terms' value='checked' className='h-5 w-5 text-lightblue border-2 focus:outline-lightblue'/>
+                  <p className="text-sm text-xs">
+                  Al usar este formulario, aceptas proporcionar información precisa
+                  y nos comprometemos a mantener tus datos personales confidenciales.
+                  </p>
+                </div>
+              </div>
+              <button type="submit" className='bg-lightblue font-bold text-sm text-darkgray py-3 mt-6 rounded-lg w-full'>Enviar</button>
+            </div>
+
+          </div>
+
+          <div className='relative flex-1'>
+          <Image
+            src="/dos-personas-construccion.avif"
+            fill
+            className='object-cover'
+            alt="Ingeniero en obra."
+          />
+          </div>
+        </form>
       </div>
 
     </main>
