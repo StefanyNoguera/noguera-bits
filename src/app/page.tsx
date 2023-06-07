@@ -91,46 +91,54 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='bg-white h-full'>
-        <h1 className='font-bold text-3xl md:p-10 p-6 pt-8 text-darkgray'>¿Por qué nosotros?</h1>
+      <div className='bg-white h-screen md:h-96 p-8'>
+        <h1 className='font-bold text-2xl md:px-10 md:py-8 text-darkgray'>¿Por qué nosotros?</h1>
 
         <div className='lg:flex lg:justify-between md:px-10 md:pb-6'>
           {/* <div className='mr-7 '> */}
-            <div className='p-5 '>
-              <h1 className='font-bold text-xl text-darkgray pb-3'>Equipo Profesional</h1>
+            <div className='py-4 md:pr-4'>
+              <div className='flex items-center pb-3'>
+                <h1 className='text-center px-3 py-1 text-lightblue text-xl font-bold bg-darkgray'>1</h1>
+                <h1 className='font-bold text-xl text-darkgray pl-2'>Equipo Profesional</h1>
+              </div>
               <p className='text-darkgray'>
-              Nuestro equipo profesional altamente cualificado de arquitectos, ingenieros y expertos en
-              construcción trabaja en estrecha colaboración con nuestros clientes para convertir sus ideas en
-              realidad, utilizando técnicas y tecnologías de vanguardia.
+              Nuestro equipo experto en construcción convierte ideas en realidad mediante técnicas y tecnologías vanguardistas,
+              en estrecha colaboración con nuestros clientes.
               </p>
             </div>
 
-            <div className='p-5'>
-              <h1 className='font-bold text-xl text-darkgray pb-3'>Calidad y Excelencia</h1>
+            <div className='py-4 md:pr-4'>
+              <div className='flex items-center pb-3'>
+                <h1 className='text-center px-3 py-1 text-lightblue text-xl font-bold bg-darkgray'>2</h1>
+                <h1 className='font-bold text-xl text-darkgray pl-2'>Calidad y Excelencia</h1>
+              </div>
               <p className='text-darkgray'>
-              Nos enorgullece ofrecer resultados excepcionales en cada proyecto, superando las expectativas
-              de nuestros clientes. Utilizamos los mejores materiales y técnicas de construcción para garantizar
-              la calidad y durabilidad de nuestros proyectos, creando espacios funcionales y hermosos.
+              Superamos expectativas con resultados excepcionales, utilizando materiales de calidad y técnicas de
+              construcción innovadoras para crear espacios funcionales y hermosos.
               </p>
             </div>
           {/* </div> */}
 
           {/* <div className=''> */}
-            <div className='p-5'>
-              <h1 className='font-bold text-xl text-darkgray pb-3'>Cumplimiento de Plazos y Presupuestos</h1>
+            <div className='py-4 md:pr-4'>
+              <div className='flex items-center pb-3'>
+                <h1 className='text-center px-3 py-1 text-lightblue text-xl font-bold bg-darkgray'>3</h1>
+                <h1 className='font-bold text-xl text-darkgray pl-2'>Plazos y Presupuestos</h1>
+              </div>
               <p className='text-darkgray'>
-              Nuestro equipo de gestión de proyectos altamente capacitado planifica y coordina cada etapa de la
-              construcción de manera eficiente. Nos comprometemos a cumplir con los plazos y presupuestos acordados,
-              manteniendo una comunicación abierta y transparente con nuestros clientes.
+              Nuestro equipo de gestión de proyectos eficiente cumple con plazos y presupuestos acordados, manteniendo
+              comunicación abierta y transparente con nuestros clientes.
               </p>
             </div>
 
-            <div className='p-5'>
-              <h1 className='font-bold text-xl text-darkgray pb-3'>Testimonios y Referencias</h1>
+            <div className='py-4'>
+              <div className='flex items-center pb-3'>
+                <h1 className='text-center px-3 py-1 text-lightblue text-xl font-bold bg-darkgray'>4</h1>
+                <h1 className='font-bold text-xl text-darkgray pl-2'>Testimonios y Referencias</h1>
+              </div>
               <p className='text-darkgray'>
-              La satisfacción de nuestros clientes es nuestra prioridad. Hemos recibido testimonios positivos
-              de clientes satisfechos que destacan nuestra profesionalidad, atención al detalle y compromiso con
-              la excelencia. Nuestro historial de referencias y testimonios respalda nuestro enfoque centrado en el cliente.
+              Nuestra prioridad es la satisfacción del cliente, respaldada por testimonios positivos que resaltan nuestra
+              profesionalidad, atención al detalle y compromiso con la excelencia.
               </p>
             </div>
           {/* </div> */}
