@@ -5,6 +5,7 @@ import {AiOutlineCaretDown} from "react-icons/ai";
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useRouter } from 'next/navigation';
+import ReactCurvedText from 'react-curved-text';
 
 export default function Home() {
 
@@ -58,10 +59,30 @@ export default function Home() {
             </div>
           </nav>
 
-          <div className="mt-14 ml-5 md:mt-10 md:ml-20">
-            <h1 className="text-5xl md:text-9xl text-darkgray font-bold">Construye</h1>
-            <h1 className="mt-3 text-5xl md:text-9xl text-darkgray font-bold"> Tus Sueños.</h1>
+          <div className="mt-14 ml-5 md:mt-10 md:ml-20 md:mr-10 flex justify-between">
+            <div>
+              <h1 className="text-5xl lg:text-9xl text-darkgray font-bold">Construye</h1>
+              <h1 className="mt-3 text-5xl lg:text-9xl text-darkgray font-bold"> Tus Sueños.</h1>
+            </div>
+
+            <div className='lg:mr-20'>
+              <ReactCurvedText width='300'
+              height={300}
+              cx='150'
+              cy='150'
+              rx='130'
+              ry='130'
+              startOffset={50}
+              reversed={false}
+              text='¡Lo hacemos bien desde la primera vez!'
+              textProps={{"style": {"fontSize": "29"}}}
+              textPathProps={{"fill": "#ffffff"}}
+              tspanProps={{"dy": "-6"}}
+              ellipseProps={{"style": "fill: #ff3300"}}
+              svgProps={{"style": {"transform": "rotate(0deg)"}}} />
+            </div>
           </div>
+
 
           <div className=''>
             <div className="absolute inset-x-0 bottom-0 flex justify-center h-96 min-w-full lg:h-96 md:min-w-full">
