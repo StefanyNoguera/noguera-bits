@@ -6,6 +6,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useRouter } from 'next/navigation';
 import ReactCurvedText from 'react-curved-text';
+import { motion } from 'framer-motion';
 
 export default function Home() {
 
@@ -69,20 +70,28 @@ export default function Home() {
             </div>
 
             <div className='md:mr-20 relative'>
-              <ReactCurvedText width='300'
-              height={300}
-              cx='150'
-              cy='150'
-              rx='130'
-              ry='130'
-              startOffset={50}
-              reversed={false}
-              text='¡Lo hacemos bien desde la primera vez!'
-              textProps={{"style": {"fontSize": "29"}}}
-              textPathProps={{"fill": "#ffffff"}}
-              tspanProps={{"dy": "-6"}}
-              ellipseProps={{"style": "fill: #ff3300"}}
-              svgProps={{"style": {"transform": "rotate(0deg)"}}} />
+              <motion.div
+                initial={{ rotate: 0 }}
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: 'linear' }} // Use 'linear' easing for constant velocity
+              >
+                <ReactCurvedText
+                  width='300'
+                  height={300}
+                  cx='150'
+                  cy='150'
+                  rx='130'
+                  ry='130'
+                  startOffset={50}
+                  reversed={false}
+                  text='¡Lo hacemos bien desde la primera vez!'
+                  textProps={{ style: { fontSize: '35' } }}
+                  textPathProps={{ fill: '#ffffff' }}
+                  tspanProps={{ dy: '-6' }}
+                  ellipseProps={{ style: 'fill: #ff3300' }}
+                  svgProps={{ style: { transform: 'rotate(0deg)' } }}
+                />
+              </motion.div>
             </div>
           </div>
 
