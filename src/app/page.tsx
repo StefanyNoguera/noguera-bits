@@ -43,7 +43,7 @@ export default function Home() {
   });
 
   return (
-    <main>
+    <main className='min-w-screen-full'>
       <div className="bg-gradient-to-b from-white to-gray min-h-screen">
         <div className="mx-5 md:mx-10 min-h-screen-full flex flex-col justify-between">
 
@@ -59,8 +59,8 @@ export default function Home() {
           </nav>
 
           <div className="mt-14 ml-5 md:mt-10 md:ml-20">
-            <h1 className="text-5xl md:text-9xl text-darkgray font-bold">Build Your</h1>
-            <h1 className="mt-3 text-5xl md:text-9xl text-darkgray font-bold"> Dream Place.</h1>
+            <h1 className="text-5xl md:text-9xl text-darkgray font-bold">Construye</h1>
+            <h1 className="mt-3 text-5xl md:text-9xl text-darkgray font-bold"> Tus Sueños.</h1>
           </div>
 
           <div className=''>
@@ -76,27 +76,27 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='relative bg-darkgray py-8 px-4 md:h-72 flex md:py-12 md:px-52 justify-between'>
+      <div className='relative bg-darkgray p-8 md:h-72 flex md:py-12 md:px-52 justify-between'>
         <div className='md:flex md:items-center'>
-          <h1 className='font-bold md:text-6xl text-lightblue'>50+</h1>
+          <h1 className='font-bold md:text-6xl text-2xl text-lightblue'>50+</h1>
           <p className='text-gray md:pl-5 md:text-xl'>Proyectos <br />Completados</p>
         </div>
         <div className='md:flex md:items-center'>
-          <h1 className='font-bold md:text-6xl text-lightblue'>2+</h1>
+          <h1 className='font-bold md:text-6xl text-2xl text-lightblue'>2+</h1>
           <p className='text-gray md:pl-5 md:text-xl'>Años de <br />Experiencia</p>
         </div>
         <div className='md:flex md:items-center'>
-          <h1 className='font-bold md:text-6xl text-lightblue'>10+</h1>
+          <h1 className='font-bold md:text-6xl text-2xl text-lightblue'>10+</h1>
           <p className='text-gray md:pl-5 md:text-xl'>Clientes <br />Felices</p>
         </div>
       </div>
 
       <div className='bg-white h-full'>
-        <h1 className='font-bold text-3xl md:m-12 text-darkgray'>¿Por qué nosotros?</h1>
+        <h1 className='font-bold text-3xl md:p-10 p-6 pt-8 text-darkgray'>¿Por qué nosotros?</h1>
 
-        <div className='lg:flex lg:justify-between md:m-16'>
+        <div className='lg:flex lg:justify-between md:px-10 md:pb-6'>
           {/* <div className='mr-7 '> */}
-            <div className='m-5 '>
+            <div className='p-5 '>
               <h1 className='font-bold text-xl text-darkgray pb-3'>Equipo Profesional</h1>
               <p className='text-darkgray'>
               Nuestro equipo profesional altamente cualificado de arquitectos, ingenieros y expertos en
@@ -105,7 +105,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className='m-5'>
+            <div className='p-5'>
               <h1 className='font-bold text-xl text-darkgray pb-3'>Calidad y Excelencia</h1>
               <p className='text-darkgray'>
               Nos enorgullece ofrecer resultados excepcionales en cada proyecto, superando las expectativas
@@ -116,7 +116,7 @@ export default function Home() {
           {/* </div> */}
 
           {/* <div className=''> */}
-            <div className='m-5'>
+            <div className='p-5'>
               <h1 className='font-bold text-xl text-darkgray pb-3'>Cumplimiento de Plazos y Presupuestos</h1>
               <p className='text-darkgray'>
               Nuestro equipo de gestión de proyectos altamente capacitado planifica y coordina cada etapa de la
@@ -125,7 +125,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className='m-5'>
+            <div className='p-5'>
               <h1 className='font-bold text-xl text-darkgray pb-3'>Testimonios y Referencias</h1>
               <p className='text-darkgray'>
               La satisfacción de nuestros clientes es nuestra prioridad. Hemos recibido testimonios positivos
@@ -140,12 +140,12 @@ export default function Home() {
       <div className="h-screen flex items-center justify-center">
         <form
           onSubmit={formik.handleSubmit}
-          className='flex w-full bg-darkgray h-screen'
+          className='md:flex w-full bg-darkgray h-screen'
         >
 
-          <div className='flex-1 px-20 text-gray'>
-            <h1 className='text-2xl pb-2 pt-14 font-bold'>Contactanos!</h1>
-            <p className='text-lg'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
+          <div className='flex-1 p-8 md:px-20 text-gray'>
+            <h1 className='md:text-2xl text-xl pb-2 pt-3 md:pt-14 font-bold'>Contáctanos!</h1>
+            <p className='md:text-lg text-md '>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
 
             <div className='mt-4'>
               <div className='pb-4'>
@@ -156,7 +156,7 @@ export default function Home() {
                   {formik.touched.name && formik.errors.name ? <div className='text-red-500'>{formik.errors.name}</div> : 'Nombre y Apellido'}
                 </label>
                 <input
-                  className='border-2 border-gray p-2 w-1/2 focus:outline-none focus:border-lightblue text-darkgray'
+                  className='border-2 border-gray p-2 w-full md:w-1/2 focus:outline-none focus:border-lightblue text-darkgray'
                   type="text"
                   name='name'
                   value={formik.values.name}
@@ -176,7 +176,7 @@ export default function Home() {
                   {formik.touched.email && formik.errors.email ? <div className='text-red-500'>{formik.errors.email}</div> : 'Correo Electrónico'}
                 </label>
                 <input
-                  className='border-2 border-gray p-2 w-1/2 focus:outline-none focus:border-lightblue text-darkgray'
+                  className='border-2 border-gray p-2 md:w-1/2 w-full focus:outline-none focus:border-lightblue text-darkgray'
                   type="email"
                   name='email'
                   value={formik.values.email}
@@ -196,7 +196,7 @@ export default function Home() {
                   {formik.touched.asunto && formik.errors.asunto ? <div className='text-red-500'>{formik.errors.asunto}</div> : 'Asunto'}
                 </label>
                 <input
-                  className='border-2 border-gray p-2 w-1/2 focus:outline-none focus:border-lightblue text-darkgray'
+                  className='border-2 border-gray p-2 w-full md:w-1/2 focus:outline-none focus:border-lightblue text-darkgray'
                   type="text"
                   name='asunto'
                   value={formik.values.asunto}
@@ -216,7 +216,7 @@ export default function Home() {
                   {formik.touched.message && formik.errors.message ? <div className='text-red-500'>{formik.errors.message}</div> : 'Mensaje'}
                 </label>
                 <textarea
-                  className='border-2 border-gray p-2 w-1/2 focus:outline-none focus:border-lightblue text-darkgray'
+                  className='border-2 border-gray p-2 w-full md:w-1/2 focus:outline-none focus:border-lightblue text-darkgray'
                   name='message'
                   rows={2}
                   value={formik.values.message}
