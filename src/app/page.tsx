@@ -61,11 +61,14 @@ export default function Home() {
 
           <div className="mt-14 ml-5 md:mt-10 md:ml-20 md:mr-10 flex justify-between">
             <div>
-              <h1 className="text-5xl lg:text-9xl text-darkgray font-bold">Construye</h1>
-              <h1 className="mt-3 text-5xl lg:text-9xl text-darkgray font-bold"> Tus Sueños.</h1>
+              <h1 className="text-6xl md:text-8xl lg:text-9xl text-darkgray font-bold">Construye</h1>
+              <div className='lg:flex'>
+                <h1 className="z-10 mt-3 mr-3 text-6xl md:text-8xl lg:text-9xl text-darkgray font-bold"> Tus</h1>
+                <h1 className=" z-10 mt-3 mr-3 text-6xl md:text-8xl lg:text-9xl text-darkgray font-bold"> Sueños.</h1>
+              </div>
             </div>
 
-            <div className='lg:mr-20'>
+            <div className='md:mr-20 relative'>
               <ReactCurvedText width='300'
               height={300}
               cx='150'
